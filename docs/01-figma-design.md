@@ -81,73 +81,81 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 
 ### Inicio (sin libros)
 
-<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px; width: 40%;">
-        <img src="./images/screenshots/figma/home.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
-    </div>
-    <div style="flex: 1; width: 40%;">
-        <p>Esta pantalla muestra el estado inicial de la aplicación cuando no hay libros en la lista. Incluye un mensaje informativo indicando que la lista está vacía y los contadores de elementos están en cero.</p>
-    </div>
-</div>
+<table>
+    <tr>
+        <td style="width: 50%; text-align: center;">
+            <img src="./images/screenshots/figma/home.png" alt="Pantalla inicial sin libros" style="max-width: 100%; height: 500px;">
+        </td>
+        <td style="width: 50%; vertical-align: middle;">
+            Esta pantalla muestra el estado inicial de la aplicación cuando no hay libros en la lista. Incluye un mensaje informativo indicando que la lista está vacía y los contadores de elementos están en cero.
+        </td>
+    </tr>
+</table>
 
 ### Inicio (con libros)
 
-<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px; width: 40%;">
-        <img src="./images/screenshots/figma/books.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
-    </div>
-    <div style="flex: 1; width: 40%;">
-        <p>En esta pantalla se presenta el listado de libros añadidos, junto con el número total de elementos, cuántos están marcados como leídos y el precio total de los leídos.</p>
-        <p> Cada libro incluye su título, portada, autor, año de publicación, precio, estado (leído o no) y una imagen asociada a su categoría.</p>
-        <p>La eliminación de un libro es posible clicando en el icono de la papelera.</p>
-        <p>Se puede hacer scroll a la lista.</p>
-    </div>
-</div>
+<table>
+    <tr>
+        <td style="width: 50%; text-align: center;">
+            <img src="./images/screenshots/figma/books.png" alt="Pantalla inicial con libros" style="max-width: 100%; height: 500px;">
+        </td>
+        <td style="width: 50%; vertical-align: middle;">
+            En esta pantalla se presenta el listado de libros añadidos, junto con el número total de elementos, cuántos están marcados como leídos y el precio total de los leídos. 
+            Cada libro incluye su título, portada, autor, año de publicación, precio, estado (leído o no) y una imagen asociada a su categoría. 
+            La eliminación de un libro es posible clicando en el icono de la papelera. 
+            Se puede hacer scroll a la lista.
+        </td>
+    </tr>
+</table>
 
-### Advertencia de borrado de libro
+### Eliminación de un libro
 
-<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px; width: 40%;">
-        <img src="./images/screenshots/figma/delete.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
-    </div>
-    <div style="flex: 1; width: 40%;">
-        <p>Al pulsar en la papelera para eliminar un libro, se desplegará esta pequeña ventana de advertencia donde debe confirmarse su eliminación.</p>
-        </ul>
-    </div>
-</div>
+<table>
+    <tr>
+        <td style="width: 50%; text-align: center;">
+            <img src="./images/screenshots/figma/delete.png" alt="Advertencia de borrado de libro" style="max-width: 100%; height: 600px;">
+        </td>
+        <td style="width: 50%; vertical-align: middle;">
+            Al pulsar en la papelera para eliminar un libro, se desplegará esta pequeña ventana de advertencia donde debe confirmarse su eliminación.
+        </td>
+    </tr>
+</table>
 
 ### Formulario de creación
 
-<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px; width: 40%;">
-        <img src="./images/screenshots/figma/form.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
-    </div>
-    <div style="flex: 1; width: 40%;">
-        <p>El diseño de esta pantalla incluye un modal con un formulario para añadir un nuevo libro. El formulario permite ingresar todos los datos necesarios, como título, portada, autor, año de publicación, precio y categoría.</p>
-        <p> Todos los campos son requeridos.</p>
-        <p> Se dan validaciones de las entradas del usuario:</p>
-        <ul>
-            <li>Título y autor son campos libres de texto.</li>
-            <li>Año deberá ser un número menor a 2026. Un año válido.</li>
-            <li>La imagen es un campo libro de texto donde se espera un enlace. Si el enlace no es una imagen válida, se mostrará una por defecto.</li>
-            <li>La categoría se eligirá de un menú desplegable.</li>
-            <li>El precio deberá de seguir el formato válido de dinero.</li>
-            <li>Si el libro fue leído o no también será obligatorio y elegido por radio input.</li>
-        </ul>
-    </div>
-</div>
+<table>
+    <tr>
+        <td style="width: 50%; text-align: center;">
+            <img src="./images/screenshots/figma/form.png" alt="Formulario de creación" style="max-width: 100%; height: 500px;">
+        </td>
+        <td style="width: 50%; vertical-align: middle;">
+            El diseño de esta pantalla incluye un modal con un formulario para añadir un nuevo libro. El formulario permite ingresar todos los datos necesarios, como título, portada, autor, año de publicación, precio y categoría. 
+            Todos los campos son requeridos. Se dan validaciones de las entradas del usuario:
+            <ul>
+                <li>Título y autor son campos libres de texto.</li>
+                <li>Año deberá ser un número menor a 2026. Un año válido.</li>
+                <li>La imagen es un campo libre de texto donde se espera un enlace. Si el enlace no es una imagen válida, se mostrará una por defecto.</li>
+                <li>La categoría se elegirá de un menú desplegable.</li>
+                <li>El precio deberá seguir el formato válido de dinero.</li>
+                <li>Si el libro fue leído o no también será obligatorio y elegido por radio input.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
 ### Formulario con errores
 
-<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px; width: 40%">
-        <img src="./images/screenshots/figma/validation.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
-    </div>
-    <div style="flex: 1; width: 40%">
-        <p>Esta pantalla muestra el formulario de creación con validaciones activadas. Los errores se destacan visualmente para guiar al usuario en la corrección de los datos ingresados.</p>
-        <p>Estos son sólo alguno de los errores que pueden ocurrir.</p>
-    </div>
-</div>
+<table>
+    <tr>
+        <td style="width: 50%; text-align: center;">
+            <img src="./images/screenshots/figma/validation.png" alt="Formulario con errores" style="max-width: 100%; height: 500px;">
+        </td>
+        <td style="width: 50%; vertical-align: middle;">
+            Esta pantalla muestra el formulario de creación con validaciones activadas. Los errores se destacan visualmente para guiar al usuario en la corrección de los datos ingresados. 
+            Estos son sólo algunos de los errores que pueden ocurrir.
+        </td>
+    </tr>
+</table>
 
 <br>
 
