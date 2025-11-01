@@ -49,18 +49,17 @@ En Figma, además de mostrar el diseño, he incluido una pequeña simulación de
 ## Colores y tipografía
 
 Crear una `paleta de colores` es esencial para mantener la consistencia visual y la identidad de un proyecto. En este caso, la paleta define colores específicos para elementos clave como fondos, textos y estados (advertencias, resaltados, etc.):
-
-| Nombre del color     | Código HEX | Nombre asignado en el proyecto | Muestra de color                                                                                                  |
+| Nombre del color | Código HEX | Nombre asignado en el proyecto | Muestra de color |
 | -------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| Amarillo claro       | `#FEFCEA`  | Fondo principal                | <span style="background-color:#FEFCEA; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Verde azulado        | `#8ABEB9`  | Fondo secundario               | <span style="background-color:#8ABEB9; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Verde menta claro    | `#AFF4C6`  | Resaltado                      | <span style="background-color:#AFF4C6; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Azul petróleo oscuro | `#305669`  | Fondo botón                    | <span style="background-color:#305669; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Gris oscuro          | `#535353`  | Texto primario                 | <span style="background-color:#535353; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Blanco               | `#FFFFFF`  | Texto secundario               | <span style="background-color:#FFFFFF; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Verde pastel         | `#EBFFEE`  | Texto terciario                | <span style="background-color:#EBFFEE; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Granate oscuro       | `#633B48`  | Borrar                         | <span style="background-color:#633B48; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
-| Rojo intenso         | `#B51111`  | Advertencia                    | <span style="background-color:#B51111; padding:5px; border:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> |
+| Amarillo claro | `#FEFCEA` | Fondo principal | <div style="background-color:#FEFCEA; width:50px; height:20px; border:1px solid #000;"></div> |
+| Verde azulado | `#8ABEB9` | Fondo secundario | <div style="background-color:#8ABEB9; width:50px; height:20px; border:1px solid #000;"></div> |
+| Verde menta claro | `#AFF4C6` | Resaltado | <div style="background-color:#AFF4C6; width:50px; height:20px; border:1px solid #000;"></div> |
+| Azul petróleo oscuro | `#305669` | Fondo botón | <div style="background-color:#305669; width:50px; height:20px; border:1px solid #000;"></div> |
+| Gris oscuro | `#535353` | Texto primario | <div style="background-color:#535353; width:50px; height:20px; border:1px solid #000;"></div> |
+| Blanco | `#FFFFFF` | Texto secundario | <div style="background-color:#FFFFFF; width:50px; height:20px; border:1px solid #000;"></div> |
+| Verde pastel | `#EBFFEE` | Texto terciario | <div style="background-color:#EBFFEE; width:50px; height:20px; border:1px solid #000;"></div> |
+| Granate oscuro | `#633B48` | Borrar | <div style="background-color:#633B48; width:50px; height:20px; border:1px solid #000;"></div> |
+| Rojo intenso | `#B51111` | Advertencia | <div style="background-color:#B51111; width:50px; height:20px; border:1px solid #000;"></div> |
 
 [Puedes hacer click aquí para ver el fichero de la paleta de colores](../src/theme/color.ts)
 
@@ -82,22 +81,22 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 
 ### Inicio (sin libros)
 
-<div style="display: flex; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px;">
+<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+    <div style="flex: 1; height: 500px; width: 40%;">
         <img src="./images/screenshots/figma/home.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
     </div>
-    <div style="flex: 1;">
+    <div style="flex: 1; width: 40%;">
         <p>Esta pantalla muestra el estado inicial de la aplicación cuando no hay libros en la lista. Incluye un mensaje informativo indicando que la lista está vacía y los contadores de elementos están en cero.</p>
     </div>
 </div>
 
 ### Inicio (con libros)
 
-<div style="display: flex; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px;">
+<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+    <div style="flex: 1; height: 500px; width: 40%;">
         <img src="./images/screenshots/figma/books.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
     </div>
-    <div style="flex: 1;">
+    <div style="flex: 1; width: 40%;">
         <p>En esta pantalla se presenta el listado de libros añadidos, junto con el número total de elementos, cuántos están marcados como leídos y el precio total de los leídos.</p>
         <p> Cada libro incluye su título, portada, autor, año de publicación, precio, estado (leído o no) y una imagen asociada a su categoría.</p>
         <p>La eliminación de un libro es posible clicando en el icono de la papelera.</p>
@@ -105,13 +104,25 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
     </div>
 </div>
 
+### Advertencia de borrado de libro
+
+<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+    <div style="flex: 1; height: 500px; width: 40%;">
+        <img src="./images/screenshots/figma/delete.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
+    </div>
+    <div style="flex: 1; width: 40%;">
+        <p>Al pulsar en la papelera para eliminar un libro, se desplegará esta pequeña ventana de advertencia donde debe confirmarse su eliminación.</p>
+        </ul>
+    </div>
+</div>
+
 ### Formulario de creación
 
-<div style="display: flex; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px;">
+<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+    <div style="flex: 1; height: 500px; width: 40%;">
         <img src="./images/screenshots/figma/form.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
     </div>
-    <div style="flex: 1;">
+    <div style="flex: 1; width: 40%;">
         <p>El diseño de esta pantalla incluye un modal con un formulario para añadir un nuevo libro. El formulario permite ingresar todos los datos necesarios, como título, portada, autor, año de publicación, precio y categoría.</p>
         <p> Todos los campos son requeridos.</p>
         <p> Se dan validaciones de las entradas del usuario:</p>
@@ -128,11 +139,11 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 
 ### Formulario con errores
 
-<div style="display: flex; align-items: center; gap: 20px;">
-    <div style="flex: 1; height: 500px;">
+<div style="display: flex; flex-direction: row; align-items: center; gap: 20px;">
+    <div style="flex: 1; height: 500px; width: 40%">
         <img src="./images/screenshots/figma/validation.png" alt="Pantalla inicial sin libros" style="max-width: 100%;">
     </div>
-    <div style="flex: 1;">
+    <div style="flex: 1; width: 40%">
         <p>Esta pantalla muestra el formulario de creación con validaciones activadas. Los errores se destacan visualmente para guiar al usuario en la corrección de los datos ingresados.</p>
         <p>Estos son sólo alguno de los errores que pueden ocurrir.</p>
     </div>
