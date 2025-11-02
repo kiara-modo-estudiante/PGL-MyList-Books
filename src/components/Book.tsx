@@ -1,9 +1,11 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
-import React from "react";
+import React, { useState } from "react";
 import { Book as BookType, CategoryImages } from "../types/book";
 import colors from "@/theme/color";
 import typography from "@/theme/typography";
+import DeleteConfirmationModal from "./modals/DeleteConfirmationModal";
+import { useBookContext } from "@/context/BookContext";
 
 const Book = ({
   id,
@@ -15,10 +17,17 @@ const Book = ({
   isRead,
   yearPublished,
 }: BookType) => {
-  const [isBookRead, setIsBookRead] = React.useState(isRead);
+  const { deleteBook } = useBookContext();
+  const [isBookRead, setIsBookRead] = useState(isRead);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const toggleReadStatus = () => {
     setIsBookRead((prevState) => !prevState);
+  };
+
+  const handleDelete = () => {
+    setIsModalVisible(false);
+    deleteBook(id);
   };
 
   return (
@@ -51,11 +60,22 @@ const Book = ({
               <Text style={typography.read}>Not yet read</Text>
             </View>
           )}
-          <FontAwesome5 name="trash" size={20} color={colors.delete} />
+          <FontAwesome5
+            name="trash"
+            size={20}
+            color={colors.delete}
+            onPress={() => setIsModalVisible(true)}
+          />
         </View>
         <Text style={[typography.body, styles.priceText]}>€{price}</Text>
       </View>
       <Image source={CategoryImages[category]} style={styles.categoryImage} />
+      <DeleteConfirmationModal
+        visible={isModalVisible}
+        title={title}
+        onCancel={() => setIsModalVisible(false)}
+        onDelete={handleDelete}
+      />
     </View>
   );
 };
