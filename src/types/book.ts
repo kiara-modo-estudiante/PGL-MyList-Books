@@ -41,6 +41,7 @@ export const CategoryImages: Record<Category, ImageSourcePropType> = {
  */
 export interface Book {
   id: string;
+  cover?: ImageSourcePropType;
   title: string;
   author: string;
   category: Category;
