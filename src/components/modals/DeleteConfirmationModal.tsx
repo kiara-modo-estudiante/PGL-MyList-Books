@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, View, Text, StyleSheet, Button, Pressable } from "react-native";
+import { Modal, View, Text, StyleSheet, Pressable } from "react-native";
 import colors from "@/theme/color";
 import typography from "@/theme/typography";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -11,6 +11,14 @@ interface DeleteConfirmationModalProps {
   onDelete: () => void;
 }
 
+/**
+ * A modal component to confirm the deletion of an item.
+ *
+ * @param visible - Whether the modal is visible.
+ * @param title - The title of the item to be deleted.
+ * @param onCancel - Function to call when the cancel button is pressed.
+ * @param onDelete - Function to call when the delete button is pressed.
+ */
 const DeleteConfirmationModal = ({
   visible,
   title,

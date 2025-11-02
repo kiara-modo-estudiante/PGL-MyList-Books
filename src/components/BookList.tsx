@@ -5,6 +5,12 @@ import { useBookContext } from "@/context/BookContext";
 import colors from "@/theme/color";
 import { Book as BookType } from "@/types/book";
 
+/**
+ * A component that displays a list of books. If no books are available,
+ * it shows a placeholder message.
+ *
+ * @returns A list of books or a message indicating no books are available.
+ */
 const BookList = () => {
   const { books } = useBookContext();
 

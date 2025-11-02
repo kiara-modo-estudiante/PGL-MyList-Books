@@ -7,6 +7,22 @@ import typography from "@/theme/typography";
 import DeleteConfirmationModal from "./modals/DeleteConfirmationModal";
 import { useBookContext } from "@/context/BookContext";
 
+/**
+ * A component that displays the details of a single book, including its
+ * title, author, cover image, price, category, and read status. It also
+ * allows the user to toggle the read status and delete the book.
+ *
+ * @param id - The unique identifier of the book.
+ * @param title - The title of the book.
+ * @param author - The author of the book.
+ * @param cover - The cover image of the book.
+ * @param price - The price of the book.
+ * @param category - The category of the book.
+ * @param isRead - Whether the book has been read.
+ * @param yearPublished - The year the book was published.
+ *
+ * @returns A styled component displaying the book's details.
+ */
 const Book = ({
   id,
   title,
