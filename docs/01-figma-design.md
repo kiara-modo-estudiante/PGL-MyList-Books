@@ -51,15 +51,15 @@ En Figma, además de mostrar el diseño, he incluido una pequeña simulación de
 Crear una `paleta de colores` es esencial para mantener la consistencia visual y la identidad de un proyecto. En este caso, la paleta define colores específicos para elementos clave como fondos, textos y estados (advertencias, resaltados, etc.):
 | Nombre del color | Código HEX | Nombre asignado en el proyecto | Muestra de color |
 | -------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| Amarillo claro | `#FEFCEA` | Fondo principal | <div style="background-color:#FEFCEA; width:50px; height:20px; border:1px solid #000;"></div> |
-| Verde azulado | `#8ABEB9` | Fondo secundario | <div style="background-color:#8ABEB9; width:50px; height:20px; border:1px solid #000;"></div> |
-| Verde menta claro | `#AFF4C6` | Resaltado | <div style="background-color:#AFF4C6; width:50px; height:20px; border:1px solid #000;"></div> |
-| Azul petróleo oscuro | `#305669` | Fondo botón | <div style="background-color:#305669; width:50px; height:20px; border:1px solid #000;"></div> |
-| Gris oscuro | `#535353` | Texto primario | <div style="background-color:#535353; width:50px; height:20px; border:1px solid #000;"></div> |
-| Blanco | `#FFFFFF` | Texto secundario | <div style="background-color:#FFFFFF; width:50px; height:20px; border:1px solid #000;"></div> |
-| Verde pastel | `#EBFFEE` | Texto terciario | <div style="background-color:#EBFFEE; width:50px; height:20px; border:1px solid #000;"></div> |
-| Granate oscuro | `#633B48` | Borrar | <div style="background-color:#633B48; width:50px; height:20px; border:1px solid #000;"></div> |
-| Rojo intenso | `#B51111` | Advertencia | <div style="background-color:#B51111; width:50px; height:20px; border:1px solid #000;"></div> |
+| Amarillo claro | `#FEFCEA` | Fondo principal | ![Amarillo claro](./images/screenshots/colors/fefcea.png) |
+| Verde azulado | `#8ABEB9` | Fondo secundario | ![Verde azulado](./images/screenshots/colors/8abeb9.png) |
+| Verde menta claro | `#AFF4C6` | Resaltado | ![Verde menta claro](./images/screenshots/colors/aff4c6.png) |
+| Azul petróleo oscuro | `#305669` | Fondo botón | ![Azul petróleo oscuro](./images/screenshots/colors/305669.png) |
+| Gris oscuro | `#535353` | Texto primario | ![Gris oscuro](./images/screenshots/colors/535353.png) |
+| Blanco | `#FFFFFF` | Texto secundario | ![Blanco](./images/screenshots/colors/ffffff.png) |
+| Verde pastel | `#EBFFEE` | Texto terciario | ![Verde pastel](./images/screenshots/colors/ebffee.png) |
+| Granate oscuro | `#633B48` | Borrar | ![Granate oscuro](./images/screenshots/colors/633b48.png) |
+| Rojo intenso | `#B51111` | Advertencia | ![Rojo intenso](./images/screenshots/colors/b51111.png) |
 
 [Puedes hacer click aquí para ver el fichero de la paleta de colores](../src/theme/color.ts)
 
