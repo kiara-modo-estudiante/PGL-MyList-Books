@@ -51,15 +51,15 @@ En Figma, además de mostrar el diseño, he incluido una pequeña simulación de
 Crear una `paleta de colores` es esencial para mantener la consistencia visual y la identidad de un proyecto. En este caso, la paleta define colores específicos para elementos clave como fondos, textos y estados (advertencias, resaltados, etc.):
 | Nombre del color | Código HEX | Nombre asignado en el proyecto | Muestra de color |
 | -------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| Amarillo claro | `#FEFCEA` | Fondo principal | ![Amarillo claro](./images/screenshots/colors/fefcea.png) |
-| Verde azulado | `#8ABEB9` | Fondo secundario | ![Verde azulado](./images/screenshots/colors/8abeb9.png) |
-| Verde menta claro | `#AFF4C6` | Resaltado | ![Verde menta claro](./images/screenshots/colors/aff4c6.png) |
-| Azul petróleo oscuro | `#305669` | Fondo botón | ![Azul petróleo oscuro](./images/screenshots/colors/305669.png) |
-| Gris oscuro | `#535353` | Texto primario | ![Gris oscuro](./images/screenshots/colors/535353.png) |
-| Blanco | `#FFFFFF` | Texto secundario | ![Blanco](./images/screenshots/colors/ffffff.png) |
-| Verde pastel | `#EBFFEE` | Texto terciario | ![Verde pastel](./images/screenshots/colors/ebffee.png) |
-| Granate oscuro | `#633B48` | Borrar | ![Granate oscuro](./images/screenshots/colors/633b48.png) |
-| Rojo intenso | `#B51111` | Advertencia | ![Rojo intenso](./images/screenshots/colors/b51111.png) |
+| Amarillo claro | `#FEFCEA` | Fondo principal | ![AMARILLO CLARO](./images/screenshots/colors/FEFCEA.png) |
+| Verde azulado | `#8ABEB9` | Fondo secundario | ![VERDE AZULADO](./images/screenshots/colors/8ABEB9.png) |
+| Verde menta claro | `#AFF4C6` | Resaltado | ![VERDE MENTA CLARO](./images/screenshots/colors/AFF4C6.png) |
+| Azul petróleo oscuro | `#305669` | Fondo botón | ![AZUL PETRÓLEO OSCURO](./images/screenshots/colors/305669.png) |
+| Gris oscuro | `#535353` | Texto primario | ![GRIS OSCURO](./images/screenshots/colors/535353.png) |
+| Blanco | `#FFFFFF` | Texto secundario | ![BLANCO](./images/screenshots/colors/FFFFFF.png) |
+| Verde pastel | `#EBFFEE` | Texto terciario | ![VERDE PASTEL](./images/screenshots/colors/EBFFEE.png) |
+| Granate oscuro | `#633B48` | Borrar | ![GRANATE OSCURO](./images/screenshots/colors/633B48.png) |
+| Rojo intenso | `#B51111` | Advertencia | ![ROJO INTENSO](./images/screenshots/colors/B51111.png) |
 
 [Puedes hacer click aquí para ver el fichero de la paleta de colores](../src/theme/color.ts)
 
