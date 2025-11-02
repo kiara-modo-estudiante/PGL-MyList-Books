@@ -17,7 +17,7 @@ const typography = StyleSheet.create({
   body: {
     fontFamily: "Roboto, sans-serif",
     fontSize: 16,
-    fontWeight: "400",
+    fontWeight: "600",
     color: colors.primaryText,
   },
   count: {
@@ -47,7 +47,7 @@ const typography = StyleSheet.create({
   read: {
     fontFamily: "Roboto, sans-serif",
     fontSize: 16,
-    fontWeight: 300,
+    fontWeight: 600,
     color: colors.tertiaryText,
   },
 });
