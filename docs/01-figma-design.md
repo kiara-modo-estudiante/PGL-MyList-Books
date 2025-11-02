@@ -79,83 +79,13 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 
 ## Pantallas
 
-### Inicio (sin libros)
-
-<table>
-    <tr>
-        <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/home.png" alt="Pantalla inicial sin libros" width="500">
-        </td>
-        <td style="width: 50%; vertical-align: middle;">
-            Esta pantalla muestra el estado inicial de la aplicación cuando no hay libros en la lista. Incluye un mensaje informativo indicando que la lista está vacía y los contadores de elementos están en cero.
-        </td>
-    </tr>
-</table>
-
-### Inicio (con libros)
-
-<table>
-    <tr>
-        <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/books.png" alt="Pantalla inicial con libros" width="500">
-        </td>
-        <td style="width: 50%; vertical-align: middle;">
-            En esta pantalla se presenta el listado de libros añadidos, junto con el número total de elementos, cuántos están marcados como leídos y el precio total de los leídos. 
-            Cada libro incluye su título, portada, autor, año de publicación, precio, estado (leído o no) y una imagen asociada a su categoría. 
-            La eliminación de un libro es posible clicando en el icono de la papelera. 
-            Se puede hacer scroll a la lista.
-        </td>
-    </tr>
-</table>
-
-### Eliminación de un libro
-
-<table>
-    <tr>
-        <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/delete.png" alt="Advertencia de borrado de libro" width="500">
-        </td>
-        <td style="width: 50%; vertical-align: middle;">
-            Al pulsar en la papelera para eliminar un libro, se desplegará esta pequeña ventana de advertencia donde debe confirmarse su eliminación.
-        </td>
-    </tr>
-</table>
-
-### Formulario de creación
-
-<table>
-    <tr>
-        <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/form.png" alt="Formulario de creación" width="500">
-        </td>
-        <td style="width: 50%; vertical-align: middle;">
-            El diseño de esta pantalla incluye un modal con un formulario para añadir un nuevo libro. El formulario permite ingresar todos los datos necesarios, como título, portada, autor, año de publicación, precio y categoría. 
-            Todos los campos son requeridos. Se dan validaciones de las entradas del usuario:
-            <ul>
-                <li>Título y autor son campos libres de texto.</li>
-                <li>Año deberá ser un número menor a 2026. Un año válido.</li>
-                <li>La imagen es un campo libre de texto donde se espera un enlace. Si el enlace no es una imagen válida, se mostrará una por defecto.</li>
-                <li>La categoría se elegirá de un menú desplegable.</li>
-                <li>El precio deberá seguir el formato válido de dinero.</li>
-                <li>Si el libro fue leído o no también será obligatorio y elegido por radio input.</li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-### Formulario con errores
-
-<table>
-    <tr>
-        <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/validation.png" alt="Formulario con errores" width="500">
-        </td>
-        <td style="width: 50%; vertical-align: middle;">
-            Esta pantalla muestra el formulario de creación con validaciones activadas. Los errores se destacan visualmente para guiar al usuario en la corrección de los datos ingresados. 
-            Estos son sólo algunos de los errores que pueden ocurrir.
-        </td>
-    </tr>
-</table>
+| Pantalla                    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Vista previa                                                              |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **Inicio (sin libros)**     | Esta pantalla muestra el estado inicial de la aplicación cuando no hay libros en la lista. Incluye un mensaje informativo indicando que la lista está vacía y los contadores de elementos están en cero.                                                                                                                                                                                                                                                                                                                                                                                                                      | ![Pantalla inicial sin libros](./images/screenshots/figma/home.png)       |
+| **Inicio (con libros)**     | En esta pantalla se presenta el listado de libros añadidos, junto con el número total de elementos, cuántos están marcados como leídos y el precio total de los leídos. Cada libro incluye su título, portada, autor, año de publicación, precio, estado (leído o no) y una imagen asociada a su categoría. La eliminación de un libro es posible clicando en el icono de la papelera. Se puede hacer scroll a la lista.                                                                                                                                                                                                      | ![Pantalla inicial con libros](./images/screenshots/figma/books.png)      |
+| **Eliminación de un libro** | Al pulsar en la papelera para eliminar un libro, se desplegará esta pequeña ventana de advertencia donde debe confirmarse su eliminación.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | ![Advertencia de borrado de libro](./images/screenshots/figma/delete.png) |
+| **Formulario de creación**  | El diseño de esta pantalla incluye un modal con un formulario para añadir un nuevo libro. El formulario permite ingresar todos los datos necesarios, como título, portada, autor, año de publicación, precio y categoría. Todos los campos son requeridos. Validaciones incluyen: <ul><li>Título y autor son campos libres de texto.</li><li>Año deberá ser un número menor a 2026.</li><li>La imagen es un enlace válido o se mostrará una por defecto.</li><li>La categoría se elige de un menú desplegable.</li><li>El precio debe seguir el formato de dinero.</li><li>El estado leído/no leído es obligatorio.</li></ul> | ![Formulario de creación](./images/screenshots/figma/form.png)            |
+| **Formulario con errores**  | Esta pantalla muestra el formulario de creación con validaciones activadas. Los errores se destacan visualmente para guiar al usuario en la corrección de los datos ingresados. Estos son sólo algunos de los errores que pueden ocurrir.                                                                                                                                                                                                                                                                                                                                                                                     | ![Formulario con errores](./images/screenshots/figma/validation.png)      |
 
 <br>
 
