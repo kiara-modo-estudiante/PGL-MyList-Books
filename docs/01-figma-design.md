@@ -84,7 +84,7 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 <table>
     <tr>
         <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/home.png" alt="Pantalla inicial sin libros" style="width: 500px;">
+            <img src="./images/screenshots/figma/home.png" alt="Pantalla inicial sin libros" width="500">
         </td>
         <td style="width: 50%; vertical-align: middle;">
             Esta pantalla muestra el estado inicial de la aplicación cuando no hay libros en la lista. Incluye un mensaje informativo indicando que la lista está vacía y los contadores de elementos están en cero.
@@ -97,7 +97,7 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 <table>
     <tr>
         <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/books.png" alt="Pantalla inicial con libros" style="width: 500px;">
+            <img src="./images/screenshots/figma/books.png" alt="Pantalla inicial con libros" width="500">
         </td>
         <td style="width: 50%; vertical-align: middle;">
             En esta pantalla se presenta el listado de libros añadidos, junto con el número total de elementos, cuántos están marcados como leídos y el precio total de los leídos. 
@@ -113,7 +113,7 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 <table>
     <tr>
         <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/delete.png" alt="Advertencia de borrado de libro" style="width: 500px;">
+            <img src="./images/screenshots/figma/delete.png" alt="Advertencia de borrado de libro" width="500">
         </td>
         <td style="width: 50%; vertical-align: middle;">
             Al pulsar en la papelera para eliminar un libro, se desplegará esta pequeña ventana de advertencia donde debe confirmarse su eliminación.
@@ -126,7 +126,7 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 <table>
     <tr>
         <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/form.png" alt="Formulario de creación" style="width: 500px;">
+            <img src="./images/screenshots/figma/form.png" alt="Formulario de creación" width="500">
         </td>
         <td style="width: 50%; vertical-align: middle;">
             El diseño de esta pantalla incluye un modal con un formulario para añadir un nuevo libro. El formulario permite ingresar todos los datos necesarios, como título, portada, autor, año de publicación, precio y categoría. 
@@ -148,7 +148,7 @@ Todas estas representaciones fueron obtenidas [iStock](https://www.istockphoto.c
 <table>
     <tr>
         <td style="width: 50%; text-align: center;">
-            <img src="./images/screenshots/figma/validation.png" alt="Formulario con errores" style="width: 500px;">
+            <img src="./images/screenshots/figma/validation.png" alt="Formulario con errores" width="500">
         </td>
         <td style="width: 50%; vertical-align: middle;">
             Esta pantalla muestra el formulario de creación con validaciones activadas. Los errores se destacan visualmente para guiar al usuario en la corrección de los datos ingresados. 
