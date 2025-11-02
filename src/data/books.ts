@@ -1,8 +1,9 @@
 import { Book, Category } from "../types/book";
+import uuid from "react-native-uuid";
 
 export const books: Book[] = [
   {
-    id: "1",
+    id: uuid.v4(),
     title: "A Little Life",
     author: "Hanya Yanagihara",
     category: Category.Drama,
@@ -12,7 +13,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/a_little_life.jpg"),
   },
   {
-    id: "2",
+    id: uuid.v4(),
     title: "Sapiens",
     author: "Yuval Noah Harari",
     category: Category.History,
@@ -22,7 +23,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/sapiens.jpg"),
   },
   {
-    id: "3",
+    id: uuid.v4(),
     title: "Normal People",
     author: "Sally Rooney",
     category: Category.Romance,
@@ -32,7 +33,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/normal_people.jpg"),
   },
   {
-    id: "4",
+    id: uuid.v4(),
     title: "I Who Have Never Known Men",
     author: "Jacqueline Harpman",
     category: Category.Drama,
@@ -42,7 +43,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/i_who_have_never_known_men.jpg"),
   },
   {
-    id: "5",
+    id: uuid.v4(),
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
     category: Category.SelfHelp,
@@ -52,7 +53,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/thinking_fast_and_slow.jpg"),
   },
   {
-    id: "6",
+    id: uuid.v4(),
     title: "My Year of Rest and Relaxation",
     author: "Ottessa Moshfegh",
     category: Category.Drama,
@@ -62,7 +63,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/my_year_of_rest_and_relaxation.jpg"),
   },
   {
-    id: "7",
+    id: uuid.v4(),
     title: "Brokeback Mountain",
     author: "Annie Proulx",
     category: Category.Romance,
@@ -72,7 +73,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/brokeback_mountain.jpg"),
   },
   {
-    id: "8",
+    id: uuid.v4(),
     title: "The Five People You Meet in Heaven",
     author: "Mitch Albom",
     category: Category.Classic,
@@ -82,7 +83,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/the_five_people_you_meet_in_heaven.jpg"),
   },
   {
-    id: "9",
+    id: uuid.v4(),
     title: "The Alchemist",
     author: "Paulo Coelho",
     category: Category.Classic,
@@ -92,7 +93,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/the_alchemist.jpg"),
   },
   {
-    id: "10",
+    id: uuid.v4(),
     title: "Animal Farm",
     author: "George Orwell",
     category: Category.Classic,
@@ -102,7 +103,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/animal_farm.jpg"),
   },
   {
-    id: "11",
+    id: uuid.v4(),
     title: "The Secret History",
     author: "Donna Tartt",
     category: Category.Crime,
@@ -112,7 +113,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/the_secret_history.jpg"),
   },
   {
-    id: "12",
+    id: uuid.v4(),
     title: "The Midnight Library",
     author: "Matt Haig",
     category: Category.Fantasy,
@@ -122,7 +123,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/the_midnight_library.jpg"),
   },
   {
-    id: "13",
+    id: uuid.v4(),
     title: "The Ballad of Songbirds and Snakes",
     author: "Suzanne Collins",
     category: Category.Fantasy,
@@ -132,7 +133,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/the_ballad_of_songbirds_and_snakes.jpg"),
   },
   {
-    id: "14",
+    id: uuid.v4(),
     title: "The Maid",
     author: "Nita Prose",
     category: Category.Horror,
@@ -142,7 +143,7 @@ export const books: Book[] = [
     cover: require("../assets/images/covers/the_maid.jpg"),
   },
   {
-    id: "15",
+    id: uuid.v4(),
     title: "Mickey7",
     author: "Edward Ashton",
     category: Category.SciFi,
