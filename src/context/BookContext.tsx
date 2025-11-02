@@ -2,8 +2,11 @@ import React, { createContext, useState, useContext } from "react";
 import { BookContextType, Book as BookType } from "@/types/book";
 import { books as initialBooks } from "@/data/books";
 
-// Undefined default so TypeScript can catch misuse
-const BookContext = createContext<BookContextType | undefined>(undefined);
+// Default value for context
+const BookContext = createContext<BookContextType>({
+  books: initialBooks,
+  deleteBook: () => {},
+});
 
 export const BookProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -21,11 +24,4 @@ export const BookProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-// Custom hook for using the context safely
-export const useBookContext = (): BookContextType => {
-  const context = useContext(BookContext);
-  if (!context) {
-    throw new Error("useBookContext must be used within a BookProvider");
-  }
-  return context;
-};
+export const useBookContext = () => useContext(BookContext);
