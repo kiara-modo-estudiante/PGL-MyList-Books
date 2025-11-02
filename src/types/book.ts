@@ -49,3 +49,8 @@ export interface Book {
   price: number; // Money
   isRead: boolean;
 }
+
+export interface BookContextType {
+  books: Book[];
+  deleteBook: (id: string) => void;
+}
