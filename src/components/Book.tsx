@@ -15,6 +15,12 @@ const Book = ({
   isRead,
   yearPublished,
 }: BookType) => {
+  const [isBookRead, setIsBookRead] = React.useState(isRead);
+
+  const toggleReadStatus = () => {
+    setIsBookRead((prevState) => !prevState);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -24,12 +30,13 @@ const Book = ({
         <Text style={[typography.title, { paddingRight: 70 }]}>{title}</Text>
         <Text style={typography.body}>{`${author} (${yearPublished})`}</Text>
         <View style={styles.readAndDelete}>
-          {isRead ? (
+          {isBookRead ? (
             <View style={styles.readContainer}>
               <FontAwesome5
                 name="check-circle"
                 size={20}
                 color={colors.tertiaryText}
+                onPress={toggleReadStatus}
               />
               <Text style={typography.read}>Already read!</Text>
             </View>
@@ -39,6 +46,7 @@ const Book = ({
                 name="circle"
                 size={20}
                 color={colors.tertiaryText}
+                onPress={toggleReadStatus}
               />
               <Text style={typography.read}>Not yet read</Text>
             </View>
