@@ -28,9 +28,9 @@ const typography = StyleSheet.create({
   },
   button: {
     fontFamily: "Roboto, sans-serif",
-    fontSize: 12,
-    fontWeight: 300,
-    color: colors.secondaryText,
+    fontSize: 18,
+    fontWeight: 500,
+    color: colors.primaryBackground,
   },
   title: {
     fontFamily: "Roboto, sans-serif",
@@ -41,7 +41,7 @@ const typography = StyleSheet.create({
   label: {
     fontFamily: "Roboto, sans-serif",
     fontSize: 22,
-    fontWeight: 300,
+    fontWeight: 500,
     color: colors.tertiaryText,
   },
   read: {
