@@ -9,3 +9,7 @@ El objetivo de este proyecto es el manejo de ítems en una lista, incluyendo su 
 ### 1. Diseño de pantallas
 
 [01-figma-design.md](./docs/01-figma-design.md)
+
+### 2. Implementación de libros
+
+[02-book-implementation.md](./docs/02-book-implementation.md)
