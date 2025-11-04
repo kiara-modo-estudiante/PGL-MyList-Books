@@ -45,9 +45,9 @@ El objeto `CategoryImages` es un mapeo que asocia cada categoría con una imagen
 
 ![Mapeado de Categoria e Imagenes](./images/screenshots/code/category_images_mapping.png)
 
-### Interfaz Book
+### Interfaz BookType
 
-La interfaz `Book` define la estructura de un libro, asegurando que cada libro tenga las siguientes propiedades:
+La interfaz `BookType` define la estructura de un objeto libro, asegurando que cada libro tenga las siguientes propiedades:
 
 | Propiedad         | Validación                                                | Descripción                                                      |
 | ----------------- | --------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -77,19 +77,29 @@ Aquí muestro un pequeño ejemplo:
 
 ## Componente `Book`
 
-El componente `Book` es responsable de mostrar la información de un libro individual. Este componente recibe las propiedades de un libro y las renderiza en un diseño atractivo, establecido en la [actividad 1](01-figma-design.md).
+El componente `Book` es responsable de mostrar la información de un libro individual. Este componente recibe las propiedades de un libro gracias a la interfaz `BookProps`, la cual extiende `BookType` añadiendo las funciones para eliminar y cambiar el valor de si fue leído. En este componente mostramos un libro con un diseño atractivo, establecido en la [actividad 1](01-figma-design.md).
 
-Incluye la portada del libro, el título, el autor, el año de publicación, el precio, y un indicador visual que muestra si el libro ha sido leído o no. Además, se utiliza un ícono para representar la categoría del libro, lo que mejora la claridad visual.
+Incluye la portada del libro, el título, el autor, el año de publicación, el precio, y un indicador visual que muestra si el libro ha sido leído o no (así como la posibilidad de cambiar dicho valor, haciendo clic sobre el icono). Además, se utiliza una imagen en la esquina superior derecha para representar la categoría del libro, lo que mejora la claridad visual.
 
-El diseño del componente se logró utilizando `StyleSheet` de React Native, asegurando consistencia en los estilos y una experiencia de usuario agradable. También se incluyó un ícono de eliminación para futuras funcionalidades, como eliminar un libro de la lista.
+También se incluyó un ícono de eliminación para futuras funcionalidades, como eliminar un libro de la lista. [Para saber más sobre las interacciones con el libro haz clic aquí]()
+
+El diseño del componente se logró utilizando `StyleSheet` de React Native, asegurando consistencia en los estilos y una experiencia de usuario agradable.
 
 > Para los iconos utilicé FontAwesome5 de @expo/vector-icons
 
-[Visitar Book.tsx](../src/components/Book.tsx)
+[Visitar el componente Book.tsx](../src/components/Book.tsx)
 
 ## Componente `BookList`
 
 El componente `BookList` es responsable de renderizar la lista completa de libros. Utiliza el componente `FlatList` de React Native para manejar listas de manera eficiente, incluso con grandes cantidades de datos. Cada elemento de la lista se renderiza utilizando el componente `Book`, lo que asegura consistencia en la presentación de los libros.
+
+El componente `BookList` recibe las siguientes propiedades a través de la interfaz `BookListProps`:
+
+| Propiedad            | Tipo                   | Descripción                                                             |
+| -------------------- | ---------------------- | ----------------------------------------------------------------------- |
+| **books**            | `BookType[]`           | Una lista de objetos libro que se mostrarán en la lista.                |
+| **deleteBook**       | `(id: string) => void` | Una función que se ejecuta al eliminar un libro, recibiendo su `id`.    |
+| **toggleReadStatus** | `(id: string) => void` | Una función que se ejecuta al cambiar el estado de lectura de un libro. |
 
 [Visitar BookList.tsx](../src/components/BookList.tsx)
 
