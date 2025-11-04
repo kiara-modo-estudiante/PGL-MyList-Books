@@ -1,4 +1,4 @@
-import { Book as BookType } from "@/types/book";
+import { BookType } from "@/types/book";
 import { books as booksData } from "@/data/books";
 
 import BookList from "../../components/BookList";
