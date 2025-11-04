@@ -56,7 +56,7 @@ const Book = ({
                 name="check-circle"
                 size={20}
                 color={colors.tertiaryText}
-                onPress={toggleReadStatus}
+                onPress={() => toggleReadStatus(id)}
               />
               <Text style={typography.read}>Already read!</Text>
             </View>
@@ -66,7 +66,7 @@ const Book = ({
                 name="circle"
                 size={20}
                 color={colors.tertiaryText}
-                onPress={toggleReadStatus}
+                onPress={() => toggleReadStatus(id)}
               />
               <Text style={typography.read}>Not yet read</Text>
             </View>
