@@ -1,11 +1,10 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { Book as BookType, CategoryImages } from "../types/book";
+import { BookProps, Book as BookType, CategoryImages } from "../types/book";
 import colors from "../theme/color";
 import typography from "../theme/typography";
 import DeleteConfirmationModal from "./modals/DeleteConfirmationModal";
-import { useBookContext } from "../context/BookContext";
 
 /**
  * A component that displays the details of a single book, including its
@@ -32,14 +31,10 @@ const Book = ({
   category,
   isRead,
   yearPublished,
-}: BookType) => {
-  const { deleteBook } = useBookContext();
-  const [isBookRead, setIsBookRead] = useState(isRead);
+  deleteBook,
+  toggleReadStatus,
+}: BookProps) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const toggleReadStatus = () => {
-    setIsBookRead((prevState) => !prevState);
-  };
 
   const handleDelete = () => {
     setIsModalVisible(false);
@@ -55,7 +50,7 @@ const Book = ({
         <Text style={[typography.title, { paddingRight: 70 }]}>{title}</Text>
         <Text style={typography.body}>{`${author} (${yearPublished})`}</Text>
         <View style={styles.readAndDelete}>
-          {isBookRead ? (
+          {isRead ? (
             <View style={styles.readContainer}>
               <FontAwesome5
                 name="check-circle"

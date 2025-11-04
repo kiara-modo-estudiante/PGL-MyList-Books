@@ -1,14 +1,32 @@
+import { Book as BookType } from "@/types/book";
+import { books as booksData } from "@/data/books";
+
 import BookList from "../../components/BookList";
-import { BookProvider } from "context/BookContext";
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 const Home = () => {
+  const [books, setBooks] = useState<BookType[]>(booksData);
+
+  const deleteBook = (id: string) => {
+    setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
+  };
+
+  const toggleReadStatus = (id: string) => {
+    setBooks((prevBooks) =>
+      prevBooks.map((book) =>
+        book.id === id ? { ...book, isRead: !book.isRead } : book
+      )
+    );
+  };
+
   return (
     <View style={styles.container}>
-      <BookProvider>
-        <BookList />
-      </BookProvider>
+      <BookList
+        books={books}
+        deleteBook={deleteBook}
+        toggleReadStatus={toggleReadStatus}
+      />
     </View>
   );
 };

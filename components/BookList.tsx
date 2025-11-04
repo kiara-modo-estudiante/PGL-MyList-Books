@@ -1,9 +1,8 @@
 import React from "react";
 import { FlatList, Text, View, StyleSheet } from "react-native";
 import Book from "./Book";
-import { useBookContext } from "../context/BookContext";
 import colors from "../theme/color";
-import { Book as BookType } from "../types/book";
+import { BookListProps, Book as BookType } from "../types/book";
 
 /**
  * A component that displays a list of books. If no books are available,
@@ -11,16 +10,20 @@ import { Book as BookType } from "../types/book";
  *
  * @returns A list of books or a message indicating no books are available.
  */
-const BookList = () => {
-  const { books } = useBookContext();
-
+const BookList = ({ books, deleteBook, toggleReadStatus }: BookListProps) => {
   return (
     <View style={styles.container}>
       {books.length > 0 ? (
         <FlatList
           data={books}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }: { item: BookType }) => <Book {...item} />}
+          renderItem={({ item }: { item: BookType }) => (
+            <Book
+              {...item}
+              deleteBook={deleteBook}
+              toggleReadStatus={toggleReadStatus}
+            />
+          )}
         />
       ) : (
         <Text style={styles.emptyText}>No books added yet...</Text>

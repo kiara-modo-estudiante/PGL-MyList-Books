@@ -15,6 +15,7 @@
     "theme",
     "context",
     "app",
-    "screens"
+    "screens",
+    "components"
   ]
 }
