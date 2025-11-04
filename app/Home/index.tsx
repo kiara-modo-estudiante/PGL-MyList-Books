@@ -4,6 +4,7 @@ import { books as booksData } from "@/data/books";
 import BookList from "../../components/BookList";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import CounterRow from "@/components/CounterRow";
 
 const Home = () => {
   const [books, setBooks] = useState<BookType[]>(booksData);
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
+      <CounterRow bookList={books} />
       <BookList
         books={books}
         deleteBook={deleteBook}
