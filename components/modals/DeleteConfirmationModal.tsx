@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, View, Text, StyleSheet, Pressable } from "react-native";
-import colors from "@/theme/color";
-import typography from "@/theme/typography";
+import colors from "theme/color";
+import typography from "theme/typography";
 import { FontAwesome5 } from "@expo/vector-icons";
 
 interface DeleteConfirmationModalProps {

@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
-import { BookContextType, Book as BookType } from "../../types/book";
-import { books as initialBooks } from "../../data/books";
+import { BookContextType, Book as BookType } from "types/book";
+import { books as initialBooks } from "../data/books";
 
 /**
  * Context to manage the list of books and provide functionality

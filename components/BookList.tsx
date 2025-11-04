@@ -1,9 +1,9 @@
 import React from "react";
 import { FlatList, Text, View, StyleSheet } from "react-native";
 import Book from "./Book";
-import { useBookContext } from "@/context/BookContext";
-import colors from "@/theme/color";
-import { Book as BookType } from "@/types/book";
+import { useBookContext } from "../context/BookContext";
+import colors from "../theme/color";
+import { Book as BookType } from "../types/book";
 
 /**
  * A component that displays a list of books. If no books are available,

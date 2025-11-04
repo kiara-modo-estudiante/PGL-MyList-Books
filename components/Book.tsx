@@ -2,10 +2,10 @@ import { View, Text, Image, StyleSheet } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { Book as BookType, CategoryImages } from "../types/book";
-import colors from "@/theme/color";
-import typography from "@/theme/typography";
+import colors from "../theme/color";
+import typography from "../theme/typography";
 import DeleteConfirmationModal from "./modals/DeleteConfirmationModal";
-import { useBookContext } from "@/context/BookContext";
+import { useBookContext } from "../context/BookContext";
 
 /**
  * A component that displays the details of a single book, including its
