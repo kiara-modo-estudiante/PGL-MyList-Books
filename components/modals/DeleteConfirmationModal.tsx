@@ -3,13 +3,7 @@ import { Modal, View, Text, StyleSheet, Pressable } from "react-native";
 import colors from "theme/color";
 import typography from "theme/typography";
 import { FontAwesome5 } from "@expo/vector-icons";
-
-interface DeleteConfirmationModalProps {
-  visible: boolean;
-  title: string;
-  onCancel: () => void;
-  onDelete: () => void;
-}
+import { DeleteConfirmationModalProps } from "@/types/book";
 
 /**
  * A modal component to confirm the deletion of an item.

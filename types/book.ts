@@ -39,7 +39,7 @@ export const CategoryImages: Record<Category, ImageSourcePropType> = {
 /**
  * Represents a book with its details.
  */
-export interface Book {
+export interface BookType {
   id: string;
   cover?: ImageSourcePropType;
   title: string;
@@ -50,18 +50,25 @@ export interface Book {
   isRead: boolean;
 }
 
-export interface BookProps extends Book {
+export interface BookProps extends BookType {
   deleteBook: (id: string) => void;
   toggleReadStatus: (id: string) => void;
 }
 
 export interface BookListProps {
-  books: Book[];
+  books: BookType[];
   deleteBook: (id: string) => void;
   toggleReadStatus: (id: string) => void;
 }
 
 export interface BookContextType {
-  books: Book[];
+  books: BookType[];
   deleteBook: (id: string) => void;
+}
+
+export interface DeleteConfirmationModalProps {
+  visible: boolean;
+  title: string;
+  onCancel: () => void;
+  onDelete: () => void;
 }

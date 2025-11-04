@@ -1,7 +1,7 @@
-import { Book, Category } from "../types/book";
+import { BookType, Category } from "../types/book";
 import uuid from "react-native-uuid";
 
-export const books: Book[] = [
+export const books: BookType[] = [
   {
     id: uuid.v4(),
     title: "A Little Life",

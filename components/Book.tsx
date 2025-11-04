@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { BookProps, Book as BookType, CategoryImages } from "../types/book";
+import { BookProps, CategoryImages } from "../types/book";
 import colors from "../theme/color";
 import typography from "../theme/typography";
 import DeleteConfirmationModal from "./modals/DeleteConfirmationModal";
