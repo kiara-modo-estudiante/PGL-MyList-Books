@@ -10,7 +10,7 @@ const typography = StyleSheet.create({
   },
   subheading: {
     fontFamily: "Roboto, sans-serif",
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 600,
     color: colors.primaryText,
   },
