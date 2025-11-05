@@ -41,8 +41,9 @@ const styles = StyleSheet.create({
   },
   emptyText: {
     textAlign: "center",
-    marginVertical: 200,
+    marginVertical: 100,
     fontSize: 20,
+    fontWeight: 500,
     color: colors.primaryText,
   },
 });
