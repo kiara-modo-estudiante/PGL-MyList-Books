@@ -2,12 +2,14 @@ import { BookType } from "@/types/book";
 import { books as booksData } from "@/data/books";
 
 import BookList from "../../components/BookList";
+import { FontAwesome5 } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 import CounterRow from "@/components/CounterRow";
 import Header from "@/components/Header";
 import colors from "@/theme/color";
 import { useRouter } from "expo-router";
+import typography from "@/theme/typography";
 
 const Home = () => {
   const router = useRouter();
@@ -28,8 +30,11 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <Button title="Open Modal" onPress={() => router.push("/modal")} />
       <CounterRow bookList={books} />
+      <Pressable style={styles.button} onPress={() => router.push("/modal")}>
+        <FontAwesome5 name="book" size={20} style={typography.button} />
+        <Text style={typography.button}>Add New Book</Text>
+      </Pressable>
       <BookList
         books={books}
         deleteBook={deleteBook}
@@ -49,5 +54,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primaryBackground,
     gap: 30,
     paddingHorizontal: 10,
+  },
+  button: {
+    flexDirection: "row",
+    backgroundColor: colors.buttonBackground,
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    borderRadius: 20,
+    gap: 8,
   },
 });
