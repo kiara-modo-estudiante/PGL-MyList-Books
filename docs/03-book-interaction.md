@@ -9,6 +9,7 @@
 3. [Actualización de contadores](#3-actualización-de-contadores)
 4. [Propagación de funciones](#4-propagación-de-funciones)
 5. [Sincronización dinámica](#5-sincronización-dinámica)
+6. [Interfaces relacionadas](#6-interfaces-relacionadas)
 
 En la implementación de la aplicación, se ha diseñado un sistema para gestionar la eliminación de libros de la lista y la actualización de su estado de lectura. Esto también asegura que los valores de los contadores relacionados se actualicen dinámicamente. A continuación, se detalla cómo se ha llevado a cabo este manejo:
 
@@ -19,6 +20,8 @@ En la implementación de la aplicación, se ha diseñado un sistema para gestion
   - Se define en el componente `Home` y recibe como parámetro el `id` del libro a eliminar.
   - Utiliza el método `setBooks` para actualizar el estado de la lista de libros (`books`), filtrando aquellos libros cuyo `id` no coincida con el proporcionado.
   - Esto asegura que el libro eliminado desaparezca de la lista y, al mismo tiempo, los contadores se actualicen automáticamente, ya que dependen del estado de la lista.
+
+  Desde la interfaz del usuario, puede acceder a esta acción haciendo clic en el icono de la basura en el libro que deseas eliminar. Una vez pulsado, se abrirá un modal de confirmación.
 
   A continuación muestro el funcionamiento exitoso de esto en la aplicación:
 
@@ -35,9 +38,11 @@ En la implementación de la aplicación, se ha diseñado un sistema para gestion
     - Utiliza `setBooks` para recorrer la lista de libros y, si el `id` coincide, invierte el valor de la propiedad `isRead` del libro correspondiente.
     - Esto permite alternar entre los estados "leído" y "no leído" de un libro.
 
-    | ![Sin leer](./images/screenshots/app/not_read.jpeg) | ![Leído](./images/screenshots/app/read.jpeg) |
-    | :-------------------------------------------------: | :------------------------------------------: |
-    |                      Sin leer                       |                    Leído                     |
+  El usuario puede manejar el estado haciendo clic en el icono del círculo o del check, al lado del texto "Not yet read / Aún no leido" o "Already read / Ya leído".
+
+  | ![Sin leer](./images/screenshots/app/not_read.jpeg) | ![Leído](./images/screenshots/app/read.jpeg) |
+  | :-------------------------------------------------: | :------------------------------------------: |
+  |                      Sin leer                       |                    Leído                     |
 
 ## 3. **Actualización de contadores**
 
@@ -58,5 +63,19 @@ En la implementación de la aplicación, se ha diseñado un sistema para gestion
 - Esto asegura que la aplicación mantenga un estado consistente y actualizado en todo momento.
 
 Con este enfoque, se logra una gestión eficiente y reactiva de la lista de libros, proporcionando una experiencia de usuario fluida y coherente.
+
+## 6. **Interfaces relacionadas**
+
+Para la propagación de las funciones `deleteBook` y `toggleReadStatus`, se han definido interfaces específicas en los siguientes ficheros:
+
+- **`/types/book.ts`**:
+
+  - `BookProps`: Incluye las funciones `deleteBook` y `toggleReadStatus` como propiedades, además de los detalles del libro.
+  - `BookListProps`: Permite pasar la lista de libros y las funciones mencionadas al componente correspondiente.
+
+- **`/types/counter.ts`**:
+  - `CounterRowProps`: Define la estructura para pasar la lista de libros al componente encargado de gestionar los contadores.
+
+Estas interfaces aseguran un tipado estricto y facilitan la comunicación entre componentes, manteniendo el código modular y escalable.
 
 [< Volver al README](../README.md)
