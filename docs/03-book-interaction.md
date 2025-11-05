@@ -15,16 +15,29 @@ En la implementación de la aplicación, se ha diseñado un sistema para gestion
 ## 1. **Eliminación de libros**
 
 - **Función `deleteBook`**:
+
   - Se define en el componente `Home` y recibe como parámetro el `id` del libro a eliminar.
   - Utiliza el método `setBooks` para actualizar el estado de la lista de libros (`books`), filtrando aquellos libros cuyo `id` no coincida con el proporcionado.
   - Esto asegura que el libro eliminado desaparezca de la lista y, al mismo tiempo, los contadores se actualicen automáticamente, ya que dependen del estado de la lista.
 
+  A continuación muestro el funcionamiento exitoso de esto en la aplicación:
+
+  | ![Estado inicial, sin eliminar](./images/screenshots/app/home.PNG) | ![Confirmación de eliminación](./images/screenshots/app/confirm_deletion.PNG) | ![Estado final, eliminado el libro](./images/screenshots/app/book_deleted.PNG) |
+  | :----------------------------------------------------------------: | :---------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
+  |                           Estado inicial                           |                          Confirmación de eliminación                          |                                  Estado final                                  |
+
 ## 2. **Cambio de estado de lectura**
 
 - **Función `toggleReadStatus`**:
+
   - También definida en el componente `Home`, recibe el `id` del libro cuyo estado de lectura se desea alternar.
-  - Utiliza `setBooks` para recorrer la lista de libros y, si el `id` coincide, invierte el valor de la propiedad `isRead` del libro correspondiente.
-  - Esto permite alternar entre los estados "leído" y "no leído" de un libro.
+
+    - Utiliza `setBooks` para recorrer la lista de libros y, si el `id` coincide, invierte el valor de la propiedad `isRead` del libro correspondiente.
+    - Esto permite alternar entre los estados "leído" y "no leído" de un libro.
+
+    | ![Sin leer](./images/screenshots/app/not_read.jpeg) | ![Leído](./images/screenshots/app/read.jpeg) |
+    | :-------------------------------------------------: | :------------------------------------------: |
+    |                      Sin leer                       |                    Leído                     |
 
 ## 3. **Actualización de contadores**
 
