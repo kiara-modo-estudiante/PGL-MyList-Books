@@ -13,3 +13,7 @@ El objetivo de este proyecto es el manejo de ítems en una lista, incluyendo su 
 ### 2. Implementación de libros
 
 [02-book-implementation.md](./docs/02-book-implementation.md)
+
+### 3. Manejo de eliminación y actualización de estado de libros en la lista
+
+[02-book-implementation.md](./docs/03-book-interaction.md)
