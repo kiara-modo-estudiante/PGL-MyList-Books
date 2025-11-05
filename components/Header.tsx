@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
   },
   headerTitleContainer: {
     backgroundColor: colors.buttonBackground,
-    paddingVertical: 20,
-    width: "60%",
+    paddingVertical: 10,
+    width: "90%",
     borderRadius: 40,
     marginBottom: 20,
   },
