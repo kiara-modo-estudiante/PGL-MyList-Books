@@ -5,6 +5,8 @@ import BookList from "../../components/BookList";
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import CounterRow from "@/components/CounterRow";
+import Header from "@/components/Header";
+import colors from "@/theme/color";
 
 const Home = () => {
   const [books, setBooks] = useState<BookType[]>(booksData);
@@ -23,6 +25,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
+      <Header />
       <CounterRow bookList={books} />
       <BookList
         books={books}
@@ -40,6 +43,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white",
+    backgroundColor: colors.primaryBackground,
+    gap: 30,
+    paddingHorizontal: 10,
   },
 });
