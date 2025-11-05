@@ -7,7 +7,7 @@ import { View, Text, StyleSheet } from "react-native";
 const Counter: React.FC<CounterProps> = ({ counterLabel, counterValue }) => {
   return (
     <View style={styles.container}>
-      <Text style={typography.subheading}>{counterLabel}</Text>
+      <Text style={[typography.subheading, styles.title]}>{counterLabel}</Text>
       <View style={styles.circle}>
         <Text style={typography.count}>{counterValue}</Text>
       </View>
@@ -22,8 +22,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 20,
-    marginBottom: 20,
+    marginBottom: 10,
   },
   circle: {
     width: 120,
