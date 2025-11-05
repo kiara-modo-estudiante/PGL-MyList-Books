@@ -3,12 +3,14 @@ import { books as booksData } from "@/data/books";
 
 import BookList from "../../components/BookList";
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import CounterRow from "@/components/CounterRow";
 import Header from "@/components/Header";
 import colors from "@/theme/color";
+import { useRouter } from "expo-router";
 
 const Home = () => {
+  const router = useRouter();
   const [books, setBooks] = useState<BookType[]>(booksData);
 
   const deleteBook = (id: string) => {
@@ -26,6 +28,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Header />
+      <Button title="Open Modal" onPress={() => router.push("/modal")} />
       <CounterRow bookList={books} />
       <BookList
         books={books}
