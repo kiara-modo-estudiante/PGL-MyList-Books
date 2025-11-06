@@ -71,6 +71,8 @@ export default function Modal() {
       return;
     }
 
+    const normalizedPrice = parseFloat(price.replace(",", "."));
+
     const newBook: BookType = {
       id: uuid.v4().toString(),
       title,
@@ -78,7 +80,7 @@ export default function Modal() {
       yearPublished: parseInt(yearPublished, 10),
       cover: { uri: cover },
       category: category as Category,
-      price: parseFloat(price),
+      price: normalizedPrice,
       isRead,
     };
 

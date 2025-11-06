@@ -85,7 +85,9 @@ const Book = ({
             onPress={() => setIsModalVisible(true)}
           />
         </View>
-        <Text style={[typography.body, styles.priceText]}>€{price}</Text>
+        <Text style={[typography.body, styles.priceText]}>
+          €{price.toFixed(2)}
+        </Text>
       </View>
       <Image source={CategoryImages[category]} style={styles.categoryImage} />
       <DeleteConfirmationModal
