@@ -109,7 +109,7 @@ export default function Modal() {
         <View style={styles.closeIcon}>
           <FontAwesome5
             name="window-close"
-            size={20}
+            size={30}
             color={colors.delete}
             onPress={() => router.back()}
           />
@@ -208,7 +208,7 @@ export default function Modal() {
           ) : null}
         </View>
         <Pressable style={styles.submitButton} onPress={handleSave}>
-          <Text style={styles.submitButtonText}>Submit</Text>
+          <Text style={typography.button}>Submit</Text>
         </Pressable>
       </View>
     </View>
@@ -225,7 +225,6 @@ const styles = StyleSheet.create({
   formContainer: {
     backgroundColor: colors.secondaryBackground,
     width: "80%",
-    height: "80%",
     padding: 40,
   },
   inputField: {
@@ -272,10 +271,6 @@ const styles = StyleSheet.create({
     width: "80%",
     marginHorizontal: "auto",
   },
-  submitButtonText: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
   errorText: {
     color: colors.warning,
     fontSize: 12,
@@ -283,7 +278,7 @@ const styles = StyleSheet.create({
   },
   closeIcon: {
     position: "absolute",
-    top: 0,
-    right: 0,
+    top: 1,
+    right: 3,
   },
 });
