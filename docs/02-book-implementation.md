@@ -9,8 +9,9 @@
    - [Mapeado de Categorías con sus imágenes](#mapeado-de-categorías-con-sus-imágenes)
    - [Interfaz Book](#interfaz-book)
 2. [Datos mock](#datos-mock)
-3. [Componente `Book`](#componente-book)
-4. [Componente `BookList`](#componente-booklist)
+3. [Uso de BookContext](#uso-de-bookcontext)
+4. [Componente `Book`](#componente-book)
+5. [Componente `BookList`](#componente-booklist)
 
 ## Tipos de libro
 
@@ -75,13 +76,24 @@ En el archivo `books.ts` [[click aquí para visitar]](../src/data/books.ts), se 
 Aquí muestro un pequeño ejemplo:
 ![Mock Book](./images/screenshots/code/mock_book_example.png)
 
+## Uso de BookContext
+
+En la implementación final, se ha utilizado `BookContext` para centralizar la gestión de los libros. Esto permite que las funciones `addBook`, `deleteBook` y `toggleReadStatus` estén disponibles globalmente en toda la aplicación.
+
+- **Ventajas del uso de `BookContext`**:
+  - Centralización del estado de los libros.
+  - Simplificación de la propagación de funciones entre componentes.
+  - Mejor legibilidad y mantenimiento del código.
+
+El contexto se define en el archivo `/context/BookContext.tsx` y proporciona las funciones necesarias para gestionar los libros. Los componentes `BookList` y `Book` acceden directamente al contexto para invocar estas funciones, eliminando la necesidad de pasarlas manualmente desde el componente `Home`.
+
 ## Componente `Book`
 
-El componente `Book` es responsable de mostrar la información de un libro individual. Este componente recibe las propiedades de un libro gracias a la interfaz `BookProps`, la cual extiende `BookType` añadiendo las funciones para eliminar y cambiar el valor de si fue leído. En este componente mostramos un libro con un diseño atractivo, establecido en la [actividad 1](01-figma-design.md).
+El componente `Book` es responsable de mostrar la información de un libro individual. Este componente recibe las propiedades de un libro gracias a la interfaz `BookProps`, la cual extiende `BookType`. En este componente mostramos un libro con un diseño atractivo, establecido en la [actividad 1](01-figma-design.md).
 
-Incluye la portada del libro, el título, el autor, el año de publicación, el precio, y un indicador visual que muestra si el libro ha sido leído o no (así como la posibilidad de cambiar dicho valor, haciendo clic sobre el icono). Además, se utiliza una imagen en la esquina superior derecha para representar la categoría del libro, lo que mejora la claridad visual.
+Incluye la portada del libro, el título, el autor, el año de publicación, el precio (formateado con dos decimales), y un indicador visual que muestra si el libro ha sido leído o no (así como la posibilidad de cambiar dicho valor, haciendo clic sobre el icono). Además, se utiliza una imagen en la esquina superior derecha para representar la categoría del libro, lo que mejora la claridad visual.
 
-También se incluyó un ícono de eliminación para futuras funcionalidades, como eliminar un libro de la lista. [Para saber más sobre las interacciones con el libro haz clic aquí]()
+También se incluyó un ícono de eliminación para futuras funcionalidades, como eliminar un libro de la lista. [Para saber más sobre las interacciones con el libro haz clic aquí](03-book-interaction.md).
 
 El diseño del componente se logró utilizando `StyleSheet` de React Native, asegurando consistencia en los estilos y una experiencia de usuario agradable.
 
@@ -93,15 +105,7 @@ El diseño del componente se logró utilizando `StyleSheet` de React Native, ase
 
 El componente `BookList` es responsable de renderizar la lista completa de libros. Utiliza el componente `FlatList` de React Native para manejar listas de manera eficiente, incluso con grandes cantidades de datos. Cada elemento de la lista se renderiza utilizando el componente `Book`, lo que asegura consistencia en la presentación de los libros.
 
-El componente `BookList` recibe las siguientes propiedades a través de la interfaz `BookListProps`:
-
-| Propiedad            | Tipo                   | Descripción                                                             |
-| -------------------- | ---------------------- | ----------------------------------------------------------------------- |
-| **books**            | `BookType[]`           | Una lista de objetos libro que se mostrarán en la lista.                |
-| **deleteBook**       | `(id: string) => void` | Una función que se ejecuta al eliminar un libro, recibiendo su `id`.    |
-| **toggleReadStatus** | `(id: string) => void` | Una función que se ejecuta al cambiar el estado de lectura de un libro. |
-
-[Visitar BookList.tsx](../src/components/BookList.tsx)
+El componente `BookList` accede al `BookContext` para obtener la lista de libros y las funciones necesarias para gestionar la eliminación y el cambio de estado de lectura.
 
 <br>
 
