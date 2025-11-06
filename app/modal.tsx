@@ -209,6 +209,31 @@ export default function Modal() {
             <Text style={styles.errorText}>{errors.price}</Text>
           ) : null}
         </View>
+
+        <View style={styles.inputField}>
+          <Text style={typography.label}>Have you read it?</Text>
+          <View style={styles.radioGroup}>
+            <View style={styles.radioOption}>
+              <FontAwesome5
+                name={isRead ? "check-circle" : "circle"}
+                size={20}
+                color={colors.tertiaryText}
+                onPress={() => setIsRead(true)}
+              />
+              <Text style={typography.read}>Yes</Text>
+            </View>
+            <View style={styles.radioOption}>
+              <FontAwesome5
+                name={!isRead ? "check-circle" : "circle"}
+                size={20}
+                color={colors.tertiaryText}
+                onPress={() => setIsRead(false)}
+              />
+              <Text style={typography.read}>No</Text>
+            </View>
+          </View>
+        </View>
+
         <Pressable style={styles.submitButton} onPress={handleSave}>
           <Text style={typography.button}>Submit</Text>
         </Pressable>
