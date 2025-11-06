@@ -17,7 +17,7 @@ export const BookProvider: React.FC<{ children: React.ReactNode }> = ({
   const [books, setBooks] = useState<BookType[]>(booksData);
 
   const addBook = (book: BookType) => {
-    setBooks((prevBooks) => [...prevBooks, book]);
+    setBooks((prevBooks) => [book, ...prevBooks]);
   };
 
   const deleteBook = (id: string) => {
