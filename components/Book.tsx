@@ -34,7 +34,10 @@ const Book = ({
   deleteBook,
   toggleReadStatus,
 }: BookProps) => {
+  const defaultCover = require("../assets/images/covers/default.jpg");
+
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   const handleDelete = () => {
     setIsModalVisible(false);
@@ -44,7 +47,11 @@ const Book = ({
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={cover} style={styles.coverImage} />
+        <Image
+          source={imageError ? defaultCover : cover || defaultCover}
+          style={styles.coverImage}
+          onError={() => setImageError(true)}
+        />
       </View>
       <View style={styles.infoContainer}>
         <Text style={[typography.title, { paddingRight: 70 }]}>{title}</Text>
