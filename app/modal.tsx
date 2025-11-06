@@ -7,9 +7,11 @@ import { Picker } from "@react-native-picker/picker";
 import { FontAwesome5 } from "@expo/vector-icons";
 import colors from "@/theme/color";
 import { useRouter } from "expo-router";
+import { useBookContext } from "@/context/BookContext";
 
 export default function Modal() {
   const router = useRouter();
+  const { addBook } = useBookContext();
 
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -70,7 +72,7 @@ export default function Modal() {
     }
 
     const newBook: BookType = {
-      id: uuid.v4(),
+      id: uuid.v4().toString(),
       title,
       author,
       yearPublished: parseInt(yearPublished, 10),
@@ -80,9 +82,9 @@ export default function Modal() {
       isRead,
     };
 
-    console.log("New Book:", newBook);
+    addBook(newBook);
     router.back();
-    alert("Book saved successfully!");
+    alert("Book saved successfully! ⭐️");
 
     setTitle("");
     setAuthor("");
@@ -118,7 +120,7 @@ export default function Modal() {
             value={title}
             onChangeText={(text) => {
               setTitle(text);
-              setErrors((prev) => ({ ...prev, title: "" })); // Limpia el error
+              setErrors((prev) => ({ ...prev, title: "" }));
             }}
             style={styles.input}
           />
@@ -132,7 +134,7 @@ export default function Modal() {
             value={author}
             onChangeText={(text) => {
               setAuthor(text);
-              setErrors((prev) => ({ ...prev, author: "" })); // Limpia el error
+              setErrors((prev) => ({ ...prev, author: "" }));
             }}
             style={styles.input}
           />
@@ -146,7 +148,7 @@ export default function Modal() {
             value={yearPublished}
             onChangeText={(text) => {
               setYearPublished(text);
-              setErrors((prev) => ({ ...prev, yearPublished: "" })); // Limpia el error
+              setErrors((prev) => ({ ...prev, yearPublished: "" }));
             }}
             keyboardType="numeric"
             style={styles.input}
@@ -161,7 +163,7 @@ export default function Modal() {
             value={cover}
             onChangeText={(text) => {
               setCover(text);
-              setErrors((prev) => ({ ...prev, cover: "" })); // Limpia el error
+              setErrors((prev) => ({ ...prev, cover: "" }));
             }}
             style={styles.input}
           />
@@ -176,7 +178,7 @@ export default function Modal() {
               selectedValue={category}
               onValueChange={(itemValue) => {
                 setCategory(itemValue as Category);
-                setErrors((prev) => ({ ...prev, category: "" })); // Limpia el error
+                setErrors((prev) => ({ ...prev, category: "" }));
               }}
               style={styles.picker}
             >
@@ -196,7 +198,7 @@ export default function Modal() {
             value={price}
             onChangeText={(text) => {
               setPrice(text);
-              setErrors((prev) => ({ ...prev, price: "" })); // Limpia el error
+              setErrors((prev) => ({ ...prev, price: "" }));
             }}
             keyboardType="numeric"
             style={styles.input}

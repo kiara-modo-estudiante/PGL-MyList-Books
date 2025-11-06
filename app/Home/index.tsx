@@ -1,31 +1,17 @@
-import { BookType } from "@/types/book";
-import { books as booksData } from "@/data/books";
-
 import BookList from "../../components/BookList";
 import { FontAwesome5 } from "@expo/vector-icons";
-import React, { useState } from "react";
-import { Button, Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import CounterRow from "@/components/CounterRow";
 import Header from "@/components/Header";
 import colors from "@/theme/color";
 import { useRouter } from "expo-router";
 import typography from "@/theme/typography";
+import { useBookContext } from "@/context/BookContext";
 
 const Home = () => {
   const router = useRouter();
-  const [books, setBooks] = useState<BookType[]>(booksData);
-
-  const deleteBook = (id: string) => {
-    setBooks((prevBooks) => prevBooks.filter((book) => book.id !== id));
-  };
-
-  const toggleReadStatus = (id: string) => {
-    setBooks((prevBooks) =>
-      prevBooks.map((book) =>
-        book.id === id ? { ...book, isRead: !book.isRead } : book
-      )
-    );
-  };
+  const { books, deleteBook, toggleReadStatus } = useBookContext();
 
   return (
     <View style={styles.container}>
