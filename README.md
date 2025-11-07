@@ -94,3 +94,7 @@ La estructura del proyecto sigue una organización modular para facilitar el des
 ### 4. Modal con formulario para la creación de libros
 
 [04-form-modal.md](./docs/04-form-modal.md)
+
+### 5. Eliminar toda la lista
+
+[05-delete-all.md](./docs/05-delete-all.md)
