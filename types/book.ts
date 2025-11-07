@@ -65,10 +65,3 @@ export interface BookContextType {
   books: BookType[];
   deleteBook: (id: string) => void;
 }
-
-export interface DeleteConfirmationModalProps {
-  visible: boolean;
-  title: string;
-  onCancel: () => void;
-  onDelete: () => void;
-}
