@@ -1,13 +1,13 @@
 import React from "react";
 import ConfirmationModal from "./ConfirmationModal";
 import colors from "theme/color";
-import { DeleteListConfirmation } from "@/types/modals";
+import { DeleteListConfirmationProps } from "@/types/modals";
 
 const DeleteListConfirmation = ({
   visible,
   onCancel,
   onDelete,
-}: DeleteListConfirmation) => {
+}: DeleteListConfirmationProps) => {
   return (
     <ConfirmationModal
       visible={visible}

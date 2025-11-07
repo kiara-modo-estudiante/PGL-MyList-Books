@@ -8,12 +8,13 @@ export interface ConfirmationModalProps {
   onConfirm: () => void;
 }
 
-export interface DeleteListConfirmation {
+export interface DeleteListConfirmationProps {
   visible: boolean;
   onCancel: () => void;
   onDelete: () => void;
 }
 
-export interface DeleteBookConfirmation extends DeleteListConfirmation {
+export interface DeleteBookConfirmationProps
+  extends DeleteListConfirmationProps {
   title: string;
 }

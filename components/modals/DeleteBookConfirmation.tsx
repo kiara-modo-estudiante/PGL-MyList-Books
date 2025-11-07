@@ -1,7 +1,7 @@
 import React from "react";
 import ConfirmationModal from "./ConfirmationModal";
 import colors from "theme/color";
-import { DeleteBookConfirmation } from "@/types/modals";
+import { DeleteBookConfirmationProps } from "@/types/modals";
 
 /**
  * A modal component to confirm the deletion of an item.
@@ -16,7 +16,7 @@ const DeleteBookConfirmation = ({
   title,
   onCancel,
   onDelete,
-}: DeleteBookConfirmation) => {
+}: DeleteBookConfirmationProps) => {
   return (
     <ConfirmationModal
       visible={visible}
