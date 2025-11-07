@@ -1,10 +1,11 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import React, { useState } from "react";
-import { BookProps, CategoryImages } from "../types/book";
+import { BookType, CategoryImages } from "../types/book";
 import colors from "../theme/color";
 import typography from "../theme/typography";
 import DeleteBookConfirmation from "./modals/DeleteBookConfirmation";
+import { useBookContext } from "@/context/BookContext";
 
 /**
  * A component that displays the details of a single book, including its
@@ -31,9 +32,8 @@ const Book = ({
   category,
   isRead,
   yearPublished,
-  deleteBook,
-  toggleReadStatus,
-}: BookProps) => {
+}: BookType) => {
+  const { deleteBook, toggleReadStatus } = useBookContext();
   const defaultCover = require("../assets/images/covers/default.jpg");
 
   const [isModalVisible, setIsModalVisible] = useState(false);

@@ -50,11 +50,6 @@ export interface BookType {
   isRead: boolean;
 }
 
-export interface BookProps extends BookType {
-  deleteBook: (id: string) => void;
-  toggleReadStatus: (id: string) => void;
-}
-
 export interface BookListProps {
   books: BookType[];
   deleteBook: (id: string) => void;

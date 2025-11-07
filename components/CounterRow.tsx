@@ -1,18 +1,19 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import Counter from "./Counter";
-import { CounterRowProps } from "@/types/counter";
+import { useBookContext } from "@/context/BookContext";
+import { BookType } from "@/types/book";
 
-const CounterRow = ({ bookList }: CounterRowProps) => {
-  const totalBookCount = bookList.length.toString();
+const CounterRow = () => {
+  const { books } = useBookContext();
 
-  const readBookCount = bookList
-    .filter((book) => book.isRead)
-    .length.toString();
+  const totalBookCount = books.length.toString();
+
+  const readBookCount = books.filter((book) => book.isRead).length.toString();
 
   const sumSpentOnReadBooks =
     "€ " +
-    bookList
+    books
       .filter((book) => book.isRead)
       .reduce((sum, book) => sum + (book.price || 0), 0)
       .toFixed(2);

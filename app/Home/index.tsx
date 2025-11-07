@@ -12,8 +12,7 @@ import DeleteListConfirmation from "@/components/modals/DeleteListConfirmation";
 
 const Home = () => {
   const router = useRouter();
-  const { books, deleteBook, toggleReadStatus, deleteAllBooks } =
-    useBookContext();
+  const { books, deleteAllBooks } = useBookContext();
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -27,7 +26,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <CounterRow bookList={books} />
+      <CounterRow />
       <View style={styles.buttonContainer}>
         <Pressable
           style={styles.addButton}
@@ -48,11 +47,7 @@ const Home = () => {
           <Text style={typography.button}>Delete All Books</Text>
         </Pressable>
       </View>
-      <BookList
-        books={books}
-        deleteBook={deleteBook}
-        toggleReadStatus={toggleReadStatus}
-      />
+      <BookList />
       <DeleteListConfirmation
         visible={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
