@@ -22,6 +22,8 @@ const Home = () => {
     deleteAllBooks();
   };
 
+  const isDeleteDisabled = books.length === 0;
+
   return (
     <View style={styles.container}>
       <Header />
@@ -35,8 +37,12 @@ const Home = () => {
           <Text style={typography.button}>Add New Book</Text>
         </Pressable>
         <Pressable
-          style={styles.deleteButton}
+          style={[
+            styles.deleteButton,
+            isDeleteDisabled && styles.deleteButtonDisabled,
+          ]}
           onPress={() => setIsModalVisible(true)}
+          disabled={isDeleteDisabled}
         >
           <FontAwesome5 name="trash" size={20} style={typography.button} />
           <Text style={typography.button}>Delete All Books</Text>
@@ -105,5 +111,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+  },
+  deleteButtonDisabled: {
+    backgroundColor: "gray",
+    shadowOpacity: 0,
   },
 });
