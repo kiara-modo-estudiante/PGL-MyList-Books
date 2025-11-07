@@ -3,22 +3,17 @@ import { Modal, View, Text, StyleSheet, Pressable } from "react-native";
 import colors from "theme/color";
 import typography from "theme/typography";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { DeleteConfirmationModalProps } from "@/types/book";
+import { ConfirmationModalProps } from "@/types/modals";
 
-/**
- * A modal component to confirm the deletion of an item.
- *
- * @param visible - Whether the modal is visible.
- * @param title - The title of the item to be deleted.
- * @param onCancel - Function to call when the cancel button is pressed.
- * @param onDelete - Function to call when the delete button is pressed.
- */
-const DeleteConfirmationModal = ({
+const ConfirmationModal = ({
   visible,
-  title,
+  iconColor,
+  message,
+  subMessage,
+  confirmText,
   onCancel,
-  onDelete,
-}: DeleteConfirmationModalProps) => {
+  onConfirm,
+}: ConfirmationModalProps) => {
   return (
     <Modal transparent={true} visible={visible} animationType="fade">
       <View style={styles.overlay}>
@@ -26,15 +21,11 @@ const DeleteConfirmationModal = ({
           <FontAwesome5
             name="exclamation-triangle"
             size={80}
-            color={colors.delete}
+            color={iconColor}
             style={styles.info}
           />
-          <Text style={[typography.label, styles.info]}>
-            Are you sure you want to delete “{title}”?
-          </Text>
-          <Text style={[typography.label, styles.info]}>
-            This action can’t be reversed
-          </Text>
+          <Text style={[typography.label, styles.info]}>{message}</Text>
+          <Text style={[typography.label, styles.info]}>{subMessage}</Text>
           <View style={styles.buttonContainer}>
             <Pressable
               onPress={onCancel}
@@ -46,10 +37,10 @@ const DeleteConfirmationModal = ({
               <Text style={typography.button}>Cancel</Text>
             </Pressable>
             <Pressable
-              onPress={onDelete}
-              style={[styles.button, { backgroundColor: colors.delete }]}
+              onPress={onConfirm}
+              style={[styles.button, { backgroundColor: iconColor }]}
             >
-              <Text style={typography.button}>Delete</Text>
+              <Text style={typography.button}>{confirmText}</Text>
             </Pressable>
           </View>
         </View>
@@ -58,7 +49,7 @@ const DeleteConfirmationModal = ({
   );
 };
 
-export default DeleteConfirmationModal;
+export default ConfirmationModal;
 
 const styles = StyleSheet.create({
   overlay: {
