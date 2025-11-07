@@ -1,6 +1,6 @@
 import BookList from "../../components/BookList";
 import { FontAwesome5 } from "@expo/vector-icons";
-import React from "react";
+import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import CounterRow from "@/components/CounterRow";
 import Header from "@/components/Header";
@@ -8,23 +8,49 @@ import colors from "@/theme/color";
 import { useRouter } from "expo-router";
 import typography from "@/theme/typography";
 import { useBookContext } from "@/context/BookContext";
+import DeleteListConfirmation from "@/components/modals/DeleteListConfirmation";
 
 const Home = () => {
   const router = useRouter();
-  const { books, deleteBook, toggleReadStatus } = useBookContext();
+  const { books, deleteBook, toggleReadStatus, deleteAllBooks } =
+    useBookContext();
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleDelete = () => {
+    setIsModalVisible(false);
+    deleteAllBooks();
+  };
 
   return (
     <View style={styles.container}>
       <Header />
       <CounterRow bookList={books} />
-      <Pressable style={styles.button} onPress={() => router.push("/modal")}>
-        <FontAwesome5 name="book" size={20} style={typography.button} />
-        <Text style={typography.button}>Add New Book</Text>
-      </Pressable>
+      <View style={styles.buttonContainer}>
+        <Pressable
+          style={styles.addButton}
+          onPress={() => router.push("/modal")}
+        >
+          <FontAwesome5 name="book" size={20} style={typography.button} />
+          <Text style={typography.button}>Add New Book</Text>
+        </Pressable>
+        <Pressable
+          style={styles.deleteButton}
+          onPress={() => setIsModalVisible(true)}
+        >
+          <FontAwesome5 name="trash" size={20} style={typography.button} />
+          <Text style={typography.button}>Delete All Books</Text>
+        </Pressable>
+      </View>
       <BookList
         books={books}
         deleteBook={deleteBook}
         toggleReadStatus={toggleReadStatus}
+      />
+      <DeleteListConfirmation
+        visible={isModalVisible}
+        onCancel={() => setIsModalVisible(false)}
+        onDelete={handleDelete}
       />
     </View>
   );
@@ -41,9 +67,29 @@ const styles = StyleSheet.create({
     gap: 30,
     paddingHorizontal: 10,
   },
-  button: {
+  buttonContainer: {
+    flexDirection: "row",
+    width: "100%",
+  },
+  addButton: {
     flexDirection: "row",
     backgroundColor: colors.buttonBackground,
+    paddingVertical: 10,
+    paddingHorizontal: 40,
+    borderRadius: 20,
+    gap: 8,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  deleteButton: {
+    flexDirection: "row",
+    backgroundColor: colors.delete,
     paddingVertical: 10,
     paddingHorizontal: 40,
     borderRadius: 20,

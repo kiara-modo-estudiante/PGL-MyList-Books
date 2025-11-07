@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { BookProps, CategoryImages } from "../types/book";
 import colors from "../theme/color";
 import typography from "../theme/typography";
-import DeleteConfirmationModal from "./modals/DeleteConfirmationModal";
+import DeleteBookConfirmation from "./modals/DeleteBookConfirmation";
 
 /**
  * A component that displays the details of a single book, including its
@@ -90,7 +90,7 @@ const Book = ({
         </Text>
       </View>
       <Image source={CategoryImages[category]} style={styles.categoryImage} />
-      <DeleteConfirmationModal
+      <DeleteBookConfirmation
         visible={isModalVisible}
         title={title}
         onCancel={() => setIsModalVisible(false)}
