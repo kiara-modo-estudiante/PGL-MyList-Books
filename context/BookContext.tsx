@@ -7,6 +7,7 @@ interface BookContextProps {
   addBook: (book: BookType) => void;
   deleteBook: (id: string) => void;
   toggleReadStatus: (id: string) => void;
+  deleteAllBooks: () => void;
 }
 
 const BookContext = createContext<BookContextProps | undefined>(undefined);
@@ -32,9 +33,13 @@ export const BookProvider: React.FC<{ children: React.ReactNode }> = ({
     );
   };
 
+  const deleteAllBooks = () => {
+    setBooks([]);
+  };
+
   return (
     <BookContext.Provider
-      value={{ books, addBook, deleteBook, toggleReadStatus }}
+      value={{ books, addBook, deleteBook, toggleReadStatus, deleteAllBooks }}
     >
       {children}
     </BookContext.Provider>
