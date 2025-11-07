@@ -4,6 +4,8 @@
 
 El objetivo de este proyecto es desarrollar una aplicación móvil que permita a los usuarios gestionar una lista personalizada de libros. Los usuarios pueden agregar nuevos libros, clasificarlos por categorías, marcar su estado de lectura, y eliminar libros de la lista. La aplicación está diseñada para ofrecer una experiencia intuitiva y visualmente atractiva, utilizando tecnologías modernas como React Native y Expo.
 
+![Imagen del flow de la aplicación](./docs/images/screenshots/app/app_flow.png)
+
 ## Índice
 
 1. [Instalación](#instalación)
