@@ -109,7 +109,7 @@ El componente `BookList` accede al `BookContext` para obtener la lista de libros
 
 <br>
 
-![Muestra de la lista](./images/screenshots/ui/book-list-extract.jpeg)
+![Muestra de la lista](./images/screenshots/app/book_list_extract.jpeg.jpeg)
 
 El uso de `FlatList` permite optimizar el rendimiento al renderizar solo los elementos visibles en pantalla, lo que es crucial para aplicaciones móviles. Además, se definió un estilo para el contenedor de la lista, asegurando que los libros se muestren correctamente alineados y con un espaciado adecuado.
 
