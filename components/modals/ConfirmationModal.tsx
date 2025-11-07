@@ -34,13 +34,15 @@ const ConfirmationModal = ({
                 { backgroundColor: colors.buttonBackground },
               ]}
             >
-              <Text style={typography.button}>Cancel</Text>
+              <Text style={[typography.button, styles.buttonText]}>Cancel</Text>
             </Pressable>
             <Pressable
               onPress={onConfirm}
               style={[styles.button, { backgroundColor: iconColor }]}
             >
-              <Text style={typography.button}>{confirmText}</Text>
+              <Text style={[typography.button, styles.buttonText]}>
+                {confirmText}
+              </Text>
             </Pressable>
           </View>
         </View>
@@ -72,9 +74,13 @@ const styles = StyleSheet.create({
   },
   button: {
     paddingVertical: 20,
-    paddingHorizontal: 40,
-    textAlign: "center",
+    paddingHorizontal: 5,
+    width: "48%",
+    justifyContent: "center",
     borderRadius: "10%",
+  },
+  buttonText: {
+    textAlign: "center",
   },
   info: {
     textAlign: "center",
